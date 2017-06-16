@@ -3,13 +3,13 @@ A Laravel 5.4 Rest API and URL Shortener
 
 ....................................................................
 
-###Requirements:
+### Requirements:
 ```
  php version : ">=5.6.4", 
  composer
 ```
 
-###Composer Install to install dependencies/providers:
+### Composer Install to install dependencies/providers:
 ```
 Run 'composer install'
 ```
@@ -22,24 +22,24 @@ DB_PASSWORD=root
 ```
 
 
-###Database Migration:
+### Database Migration:
 ```
 Run 'php artisan migrate'
 ```
 
-###Database Seeder for Default User Data:
+### Database Seeder for Default User Data:
 ```
 Run 'php artisan db:seed --class=UsersTableSeeder'
 ```
 
-###Start Laravel Deployment Server:
+### Start Laravel Deployment Server:
 ```
 Run 'php artisan serve'
 ```
 
 
 
-##URL Shortener
+## URL Shortener
 
 
 *URL*: http://localhost:8000/
@@ -51,7 +51,7 @@ Github : https://github.com/mbarwick83/shorty
 
 
 
-##The Restful API routes are in 'routes/api.php'
+## The Restful API routes are in 'routes/api.php'
 
 
     -Creating Orders
