@@ -52,40 +52,42 @@ Github : https://github.com/mbarwick83/shorty
 
 ## The Restful API routes are in 'routes/api.php'
 
-
-    - Creating Orders
+1. **Creating Orders**
 
     *URL*: localhost:8000/api/orders
 
     *Method*: POST
 
     *Request body* :
+    
     ``` 
-                    {	
-                        "user_id" : 1,
-                        "email_id" : "borth.rondip@gmail.com",
-                        "order_items" : [
-                                            {
-                                                "name" : "Nike Shoe",
-                                                "price" : "1000.00"
-                                            },
-                                            {
-                                                "name" : "Adidas Shoe",
-                                                "price" : "549.00"
-                                                
-                                            }
-                                        ]
-                    }
-                    ```
+    {	
+        "user_id" : 1,
+        "email_id" : "borth.rondip@gmail.com",
+        "order_items" : [
+                            {
+                                "name" : "Nike Shoe",
+                                "price" : "1000.00"
+                            },
+                            {
+                                "name" : "Adidas Shoe",
+                                "price" : "549.00"
+                                
+                            }
+                        ]
+    }
+    ```
+    
     *Response* : 
 
     On Success (200): 
+    
     ```
-                            {
-                            "msg": "Order placed successfully",
-                            "order_id": 1
-                        }
-                        ```
+    {
+        "msg": "Order placed successfully",
+        "order_id": 1
+    }
+    ```
     On Invalid Email (400): ```
     {
                                 "msg": "Email you entered is invalid"
