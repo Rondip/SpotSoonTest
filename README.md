@@ -52,13 +52,13 @@ Github : https://github.com/mbarwick83/shorty
 
 ## The Restful API routes are in 'routes/api.php'
 
-###### Creating Orders
+#### 1. Creating Orders
 
-    **URL** : localhost:8000/api/orders
+##### URL : localhost:8000/api/orders
 
-    **Method** : POST
+##### Method : POST
 
-    **Request body** 
+##### Request body 
     
     ``` 
     {	
@@ -78,9 +78,9 @@ Github : https://github.com/mbarwick83/shorty
     }
     ```
     
-    **Response** : 
+##### Response
 
-    **On Success (200)** 
+###### On Success (200) 
     
     ```
     {
@@ -89,7 +89,7 @@ Github : https://github.com/mbarwick83/shorty
     }
     ```
     
-    **On Invalid Email (400)**
+###### On Invalid Email (400)
     
     ```
     {
@@ -97,7 +97,7 @@ Github : https://github.com/mbarwick83/shorty
     }  
     ```                       
     
-    **On Invalid User ID (400)** 
+###### On Invalid User ID (400) 
     
     ```
     {
@@ -105,7 +105,7 @@ Github : https://github.com/mbarwick83/shorty
     }
     ```
     
-    **If No order items are found (400)**
+###### If No order items are found (400)
     
     ```
     {
@@ -113,22 +113,23 @@ Github : https://github.com/mbarwick83/shorty
     }                                                     
     ```                  
 
-###### Order Update
+#### 2. Order Update
 
-    **URL** : localhost:8000/api/orders/1
+##### URL : localhost:8000/api/orders/1
 
-    **Method** : PUT
+##### Method : PUT
 
-    **Request body**  
+##### Request body
+
     ```
     {
         "status" : "processed"
     }
     ```
 
-    **Response** 
+##### Response 
 
-    **On Success (200)**
+###### On Success (200)
     
     ``` 
     {
@@ -136,7 +137,7 @@ Github : https://github.com/mbarwick83/shorty
     }
     ```                
 
-    **If Payment not Completed (400)**
+###### If Payment not Completed (400)
     
     ```
     {
@@ -144,7 +145,7 @@ Github : https://github.com/mbarwick83/shorty
     } 
     ```                  
 
-    **Invalid Status value (400)**
+###### Invalid Status value (400)
     
     ```
     {
@@ -153,42 +154,45 @@ Github : https://github.com/mbarwick83/shorty
     ``` 
 
 
-###### Cancel Order
+#### 3. Cancel Order
 
-    **URL**: localhost:8000/api/orders/1/cancel
+##### URL: localhost:8000/api/orders/1/cancel
 
-    **Method**: PUT
+##### Method: PUT
 
-    **Response**
+##### Response
+    
     ```
     {
         "msg": "Order Cancelled"
     }
     ```
 
-######  Order Payment
+####  4. Order Payment
 
-    **URL**: localhost:8000/api/orders/1/payment
+##### URL: localhost:8000/api/orders/1/payment
 
-    **Method**: PUT
+##### Method: PUT
 
-    **Request Body**:
+##### Request Body
+    
     ```
     {
         "payment": "cod"
     } 
     ```
 
-    **Response**
+##### Response
 
-    **On Success (200)** 
+###### On Success (200) 
+    
     ```
     {
         "msg": "Payment added successfully"
     } 
     ```               
 
-    **If Payment already done (400)** 
+###### If Payment already done (400) 
     
     ``` 
     {
@@ -196,7 +200,7 @@ Github : https://github.com/mbarwick83/shorty
     }
     ```
 
-    **If Order is cancelled (400)** 
+###### If Order is cancelled (400) 
     
     ```
     {
@@ -204,15 +208,16 @@ Github : https://github.com/mbarwick83/shorty
     }        
     ```                                            
 
-###### Get Order By ID
+#### 5. Get Order By ID
 
-    **URL** : localhost:8000/api/orders/1
+##### URL : localhost:8000/api/orders/1
 
-    **Method** : GET
+##### Method : GET
 
-    **Response** 
+##### Response 
 
-    **On Success (200)**
+###### On Success (200)
+
     ```
     {
         "msg": "Order Details with ID 1",
@@ -237,7 +242,7 @@ Github : https://github.com/mbarwick83/shorty
     }        
     ```  
 
-    **Invalid Order ID (404)** 
+###### Invalid Order ID (404) 
     
     ```
     {
@@ -246,15 +251,16 @@ Github : https://github.com/mbarwick83/shorty
     ```         
 
 
-###### Get Order by User                            
+#### 6. Get Order by User                            
 
-    **URL**: localhost:8000/api/orders/search/user_id=1
+##### URL: localhost:8000/api/orders/search/user_id=1
 
-    **Method**: GET
+##### Method: GET
 
-    **Response**
+##### Response
 
-    **On Success (200)** 
+###### On Success (200)
+
     ```
     {
         "msg": "1 Orders found",
@@ -281,14 +287,16 @@ Github : https://github.com/mbarwick83/shorty
     }
     ```
 
-    **Invalid User ID (401)**
+###### Invalid User ID (401)
+
     ```
     {
         "msg": "Invalid User ID passed"
     } 
     ```                    
 
-    **If user does not have any orders (404)** 
+###### If user does not have any orders (404) 
+    
     ```
     {
         "msg": "No Orders Found",
@@ -297,16 +305,16 @@ Github : https://github.com/mbarwick83/shorty
     ```                     
 
 
-###### Get Orders created today
+#### 7. Get Orders created today
 
-    **URL**: localhost:8000/api/orders/today
+##### URL: localhost:8000/api/orders/today
 
-    **Method**: GET
+##### Method: GET
 
-    **Response**
+##### Response
 
-    **On Success (200)** 
-    
+###### On Success (200)
+     
     ```
     {
         "msg": "1 Orders have been made today",
@@ -333,7 +341,7 @@ Github : https://github.com/mbarwick83/shorty
     }     
     ```                                       
 
-    **If no orders created today (404)** 
+ ###### If no orders created today (404)
     
     ```
     {
