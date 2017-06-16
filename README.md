@@ -52,7 +52,7 @@ Github : https://github.com/mbarwick83/shorty
 
 ## The Restful API routes are in 'routes/api.php'
 
-###### 1.Creating Orders
+###### Creating Orders
 
     **URL** : localhost:8000/api/orders
 
@@ -113,7 +113,7 @@ Github : https://github.com/mbarwick83/shorty
     }                                                     
     ```                  
 
-###### 2. Order Update
+###### Order Update
 
     **URL** : localhost:8000/api/orders/1
 
@@ -153,7 +153,7 @@ Github : https://github.com/mbarwick83/shorty
     ``` 
 
 
-###### 3. Cancel Order
+###### Cancel Order
 
     **URL**: localhost:8000/api/orders/1/cancel
 
@@ -166,7 +166,7 @@ Github : https://github.com/mbarwick83/shorty
     }
     ```
 
-###### 4. Order Payment
+######  Order Payment
 
     **URL**: localhost:8000/api/orders/1/payment
 
@@ -204,7 +204,7 @@ Github : https://github.com/mbarwick83/shorty
     }        
     ```                                            
 
-###### 5. Get Order By ID
+###### Get Order By ID
 
     **URL** : localhost:8000/api/orders/1
 
@@ -246,7 +246,7 @@ Github : https://github.com/mbarwick83/shorty
     ```         
 
 
-###### 6. Get Order by User                            
+###### Get Order by User                            
 
     **URL**: localhost:8000/api/orders/search/user_id=1
 
@@ -297,41 +297,48 @@ Github : https://github.com/mbarwick83/shorty
     ```                     
 
 
+###### Get Orders created today
 
-    - Get Orders created today
+    **URL**: localhost:8000/api/orders/today
 
-    *URL*: localhost:8000/api/orders/today
+    **Method**: GET
 
-    *Method*: GET
+    **Response**
 
-    *Response*
+    **On Success (200)** 
+    
+    ```
+    {
+        "msg": "1 Orders have been made today",
+        "data": [
+            {
+                "id": 1,
+                "email_id": "borth.rondip@gmail.com",
+                "status": "delivered",
+                "created_at": "2 hours ago",
+                "order_items": [
+                    {
+                        "order_item_id": 1,
+                        "name": "Nike Shoe",
+                        "price": 1000
+                    },
+                    {
+                        "order_item_id": 2,
+                        "name": "Adidas Shoe",
+                        "price": 549
+                    }
+                ]
+            }
+        ]
+    }     
+    ```                                       
 
-    On Success (200) : ```{
-                        "msg": "1 Orders have been made today",
-                        "data": [
-                            {
-                                "id": 1,
-                                "email_id": "borth.rondip@gmail.com",
-                                "status": "delivered",
-                                "created_at": "2 hours ago",
-                                "order_items": [
-                                    {
-                                        "order_item_id": 1,
-                                        "name": "Nike Shoe",
-                                        "price": 1000
-                                    },
-                                    {
-                                        "order_item_id": 2,
-                                        "name": "Adidas Shoe",
-                                        "price": 549
-                                    }
-                                ]
-                            }
-                        ]
-                    }     ```                                       
-
-    If no orders created today (404) : ```{
-                                            "msg": "No Orders found today",
-                                            "data": []
-                                        } ```              
+    **If no orders created today (404)** 
+    
+    ```
+    {
+        "msg": "No Orders found today",
+        "data": []
+    } 
+    ```              
 
