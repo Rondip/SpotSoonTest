@@ -1,7 +1,6 @@
 # SpotSoonTest
 A Laravel 5.4 Rest API and URL Shortener
 
-....................................................................
 
 ### Requirements:
 ```
@@ -54,7 +53,7 @@ Github : https://github.com/mbarwick83/shorty
 ## The Restful API routes are in 'routes/api.php'
 
 
-    -Creating Orders
+    - Creating Orders
 
     *URL*: localhost:8000/api/orders
 
@@ -104,7 +103,7 @@ Github : https://github.com/mbarwick83/shorty
                                         }                                                     ```                  
 
 
-    -Order Update
+    - Order Update
 
     *URL* : localhost:8000/api/orders/1
 
@@ -130,7 +129,7 @@ Github : https://github.com/mbarwick83/shorty
                                 }   ``` 
 
 
-    -Cancel Order
+    - Cancel Order
 
     *URL*: localhost:8000/api/orders/1/cancel
 
@@ -141,7 +140,7 @@ Github : https://github.com/mbarwick83/shorty
               }```
 
 
-    -Order Payment
+    - Order Payment
 
     *URL*: localhost:8000/api/orders/1/payment
 
@@ -166,7 +165,7 @@ Github : https://github.com/mbarwick83/shorty
                             }        ```                                            
 
 
-    -Get Order By ID
+    - Get Order By ID
 
     *URL* : localhost:8000/api/orders/1
 
@@ -201,7 +200,7 @@ Github : https://github.com/mbarwick83/shorty
                             }   ```         
 
 
-    -Get Order by User                            
+    - Get Order by User                            
 
     *URL*: localhost:8000/api/orders/search/user_id=1
 
@@ -244,7 +243,7 @@ Github : https://github.com/mbarwick83/shorty
 
 
 
-    -Get Orders created today
+    - Get Orders created today
 
     *URL*: localhost:8000/api/orders/today
 
