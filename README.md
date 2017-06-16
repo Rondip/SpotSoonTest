@@ -66,7 +66,7 @@ The Restful API routes are in 'routes/api.php'
 
     Method: POST
 
-    Request body : "{	
+    Request body : {	
                         "user_id" : 1,
                         "email_id" : "borth.rondip@gmail.com",
                         "order_items" : [
@@ -80,7 +80,7 @@ The Restful API routes are in 'routes/api.php'
                                                 
                                             }
                                         ]
-                    }"
+                    }
 
     Response : 
 
